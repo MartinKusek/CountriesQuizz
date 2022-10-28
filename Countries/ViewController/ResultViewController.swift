@@ -33,10 +33,6 @@ class ResultViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
             super.prepare(for: segue, sender: sender)
-
-//            if let secondViewController = segue.destination as? ResultViewController {
-//                secondViewController.modalPresentationStyle = .fullScreen
-//            }
             segue.destination.modalPresentationStyle = .fullScreen
         }
 }
