@@ -82,6 +82,7 @@ struct APIService {
                 
                 if let safeData = data {
                     if let flagsData = self.parseJSONFlags(safeData) {
+                        print(flagsData)
                         completion(flagsData)
                     }
                 }
@@ -99,10 +100,11 @@ struct APIService {
             
             var flags = [FlagModel]()
             for flag in decodedData.data {
-                let flag1 = FlagModel(name: flag.name, url: flag.url)
+                let flag1 = FlagModel(name: flag.name, flag: flag.flag)
                 flags.append(flag1)
             }
             
+            print("JSON")
             return flags
             
         } catch {

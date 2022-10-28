@@ -40,7 +40,7 @@ class FlagsViewModel : NSObject {
         rightRandomNumber = Int.random(in: 0...flagsData.count-1)
         var countryName = flagsData[rightRandomNumber].name
         
-        if flagsData[rightRandomNumber].name.isEmpty || flagsData[rightRandomNumber].url.isEmpty {
+        if flagsData[rightRandomNumber].name.isEmpty || flagsData[rightRandomNumber].flag.isEmpty {
             rightRandomNumber = Int.random(in: 0...flagsData.count-1)
             countryName = flagsData[rightRandomNumber].name
         }
@@ -50,18 +50,18 @@ class FlagsViewModel : NSObject {
     }
     
     func getRightAnswer() -> String {
-        let answer = flagsData[rightRandomNumber].url
+        let answer = flagsData[rightRandomNumber].flag
         print(answer, "TOCAN")
         return answer
     }
     
     func getRandomAnswers() -> String {
         var randNumb = Int.random(in: 0...flagsData.count-1)
-        var answer = flagsData[randNumb].url
+        var answer = flagsData[randNumb].flag
         
         if answer.isEmpty {
             randNumb = Int.random(in: 0...flagsData.count-1)
-            answer = flagsData[randNumb].url
+            answer = flagsData[randNumb].flag
         }
         return answer
     }
@@ -72,7 +72,7 @@ class FlagsViewModel : NSObject {
     }
     
     func checkAnswer(_ userAnswer: String) -> Bool {
-        if userAnswer == flagsData[rightRandomNumber].url {
+        if userAnswer == flagsData[rightRandomNumber].flag {
             score += 1
             return true
         } else {
@@ -93,4 +93,26 @@ class FlagsViewModel : NSObject {
         return Float(questionCount + 1) / 10.00
     }
     
+}
+
+extension UIImageView {
+    func downloaded(from url: URL, contentMode mode: ContentMode = .scaleAspectFit) {
+        contentMode = mode
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            guard
+                let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
+                let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
+                let data = data, error == nil,
+                let image = UIImage(data: data)
+                else { return }
+            DispatchQueue.main.async() { [weak self] in
+                print(image, "IMAGE")
+                self?.image = image
+            }
+        }.resume()
+    }
+    func downloaded(from link: String, contentMode mode: ContentMode = .scaleAspectFit) {
+        guard let url = URL(string: link) else { return }
+        downloaded(from: url, contentMode: mode)
+    }
 }

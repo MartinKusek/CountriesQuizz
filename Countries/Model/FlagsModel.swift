@@ -10,7 +10,7 @@ import Foundation
 //MARK: - FlagsModel
 struct FlagModel {
    let name: String
-   let url: String
+   let flag: String
 }
 
 //MARK: - FlagsData
@@ -20,5 +20,5 @@ struct FlagsData: Codable {
 
 struct FlagData: Codable {
    let name: String
-   let url: String
+   let flag: String
 }

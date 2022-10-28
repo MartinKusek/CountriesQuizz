@@ -17,17 +17,17 @@ class StartViewController: UIViewController {
         //assignbackground()
     }
     
+    @IBAction func flagsButtonPressed(_ sender: Any) {
+        performSegue(withIdentifier: "startToFlags", sender: self)
+    }
     @IBAction func capitalCitysPressed(_ sender: Any) {
-        performSegue(withIdentifier: "startToCapital", sender: (Any).self)
+        performSegue(withIdentifier: "startToCapital", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
             super.prepare(for: segue, sender: sender)
-
-            if let secondViewController = segue.destination as? ViewController {
-                secondViewController.modalPresentationStyle = .fullScreen
-            }
+            segue.destination.modalPresentationStyle = .fullScreen
         }
     
     func assignbackground(){
