@@ -8,6 +8,8 @@
 import Foundation
 
 struct APIService {
+    
+     //MARK: - FetchCountries
 
     func fetchCountries(completion : @escaping ([CountriesModel]) -> ()) {
             
@@ -28,7 +30,7 @@ struct APIService {
                 }
                 
                 if let safeData = data {
-                    if let countriesData = self.parseJSON(safeData) {
+                    if let countriesData = self.parseJSONCoutries(safeData) {
                         completion(countriesData)
                     }
                 }
@@ -39,7 +41,7 @@ struct APIService {
         }
     }
     
-    func parseJSON(_ safeData: Data) -> [CountriesModel]? {
+    func parseJSONCoutries(_ safeData: Data) -> [CountriesModel]? {
         let decoder = JSONDecoder()
         do {
             let decodedData = try decoder.decode(CoutriesData.self, from: safeData)
@@ -51,6 +53,57 @@ struct APIService {
             }
             
             return countries
+            
+        } catch {
+            print(error)
+            return nil
+        }
+    }
+    
+     //MARK: - FetchFlags
+    
+    func fetchFlags(completion : @escaping ([FlagModel]) -> ()) {
+            
+        let urlString = "https://countriesnow.space/api/v0.1/countries/flag/images"
+        
+        //1. URL
+        if let url = URL(string: urlString) {
+            
+            //2. URLSession
+            let session = URLSession(configuration: .default)
+            
+            //3. Taks
+            
+            let task = session.dataTask(with: url) { (data, response, error) in
+                if error != nil {
+                    print(error!)
+                    return
+                }
+                
+                if let safeData = data {
+                    if let flagsData = self.parseJSONFlags(safeData) {
+                        completion(flagsData)
+                    }
+                }
+            }
+            
+            //4. Start
+            task.resume()
+        }
+    }
+    
+    func parseJSONFlags(_ safeData: Data) -> [FlagModel]? {
+        let decoder = JSONDecoder()
+        do {
+            let decodedData = try decoder.decode(FlagsData.self, from: safeData)
+            
+            var flags = [FlagModel]()
+            for flag in decodedData.data {
+                let flag1 = FlagModel(name: flag.name, url: flag.url)
+                flags.append(flag1)
+            }
+            
+            return flags
             
         } catch {
             print(error)

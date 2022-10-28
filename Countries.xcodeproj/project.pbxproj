@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		C302D8E8290BEA06005AAD36 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C302D8E7290BEA06005AAD36 /* StartViewController.swift */; };
 		C302D8EA290BF45B005AAD36 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C302D8E9290BF45B005AAD36 /* ResultViewController.swift */; };
+		C302D8EC290C214B005AAD36 /* FlagsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C302D8EB290C214B005AAD36 /* FlagsModel.swift */; };
+		C302D8EE290C2319005AAD36 /* FlagsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C302D8ED290C2319005AAD36 /* FlagsViewController.swift */; };
+		C302D8F0290C235E005AAD36 /* FlagsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C302D8EF290C235E005AAD36 /* FlagsViewModel.swift */; };
 		C30E17C92906BD8E00395AB2 /* CountriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30E17C82906BD8E00395AB2 /* CountriesViewModel.swift */; };
 		C3F75C5B2905C485008543BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F75C5A2905C485008543BD /* AppDelegate.swift */; };
 		C3F75C5D2905C485008543BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F75C5C2905C485008543BD /* SceneDelegate.swift */; };
@@ -23,6 +26,9 @@
 /* Begin PBXFileReference section */
 		C302D8E7290BEA06005AAD36 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		C302D8E9290BF45B005AAD36 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		C302D8EB290C214B005AAD36 /* FlagsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagsModel.swift; sourceTree = "<group>"; };
+		C302D8ED290C2319005AAD36 /* FlagsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagsViewController.swift; sourceTree = "<group>"; };
+		C302D8EF290C235E005AAD36 /* FlagsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagsViewModel.swift; sourceTree = "<group>"; };
 		C30E17C82906BD8E00395AB2 /* CountriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesViewModel.swift; sourceTree = "<group>"; };
 		C3F75C572905C485008543BD /* Countries.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Countries.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3F75C5A2905C485008543BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				C3F75C722905C4BC008543BD /* CountriesModel.swift */,
+				C302D8EB290C214B005AAD36 /* FlagsModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -68,6 +75,7 @@
 			children = (
 				C302D8E7290BEA06005AAD36 /* StartViewController.swift */,
 				C3F75C5E2905C485008543BD /* ViewController.swift */,
+				C302D8ED290C2319005AAD36 /* FlagsViewController.swift */,
 				C302D8E9290BF45B005AAD36 /* ResultViewController.swift */,
 			);
 			path = ViewController;
@@ -77,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				C30E17C82906BD8E00395AB2 /* CountriesViewModel.swift */,
+				C302D8EF290C235E005AAD36 /* FlagsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -201,9 +210,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C302D8F0290C235E005AAD36 /* FlagsViewModel.swift in Sources */,
 				C30E17C92906BD8E00395AB2 /* CountriesViewModel.swift in Sources */,
 				C302D8E8290BEA06005AAD36 /* StartViewController.swift in Sources */,
+				C302D8EE290C2319005AAD36 /* FlagsViewController.swift in Sources */,
 				C3F75C6F2905C4A8008543BD /* APIService.swift in Sources */,
+				C302D8EC290C214B005AAD36 /* FlagsModel.swift in Sources */,
 				C302D8EA290BF45B005AAD36 /* ResultViewController.swift in Sources */,
 				C3F75C5F2905C485008543BD /* ViewController.swift in Sources */,
 				C3F75C5B2905C485008543BD /* AppDelegate.swift in Sources */,
