@@ -33,6 +33,8 @@ class CountriesViewModel : NSObject {
     var rightRandomNumber = 0
     var score = 0
     var questionCount = 0
+    
+    var callSegue = false
 
     func getQuestion() -> String {
         rightRandomNumber = Int.random(in: 0...countriesData.count-1)
@@ -78,12 +80,12 @@ class CountriesViewModel : NSObject {
         }
     }
     
-    func nextQuestion() {
+    func nextQuestion() -> Bool {
         if questionCount + 1 < 10 {
             questionCount += 1
+            return true
         } else {
-            questionCount = 0
-            score = 0
+            return false
         }
     }
     

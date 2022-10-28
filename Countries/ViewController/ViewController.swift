@@ -37,7 +37,9 @@ class ViewController: UIViewController {
             sender.backgroundColor = UIColor.red
         }
         
-        countriesViewModel.nextQuestion()
+        if !countriesViewModel.nextQuestion() {
+            performSegue(withIdentifier: "capitalToResult", sender: self)
+        }
         
         Timer.scheduledTimer(withTimeInterval: 0.2, repeats: false) { (_) in
             self.updateUI()
@@ -50,6 +52,16 @@ class ViewController: UIViewController {
             self.updateUI()
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+            super.prepare(for: segue, sender: sender)
+
+            if let secondViewController = segue.destination as? ResultViewController {
+                secondViewController.score = countriesViewModel.score
+                secondViewController.modalPresentationStyle = .fullScreen
+            }
+        }
     
      //MARK: - UI Changes
     
