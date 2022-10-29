@@ -49,13 +49,18 @@ class FlagsViewModel : NSObject {
         return questionString
     }
     
-    func getRightAnswer() -> String {
+    func getRightAnswer() -> NSAttributedString {
         let answer = flagsData[rightRandomNumber].unicodeFlag
         print(answer, "TOCAN")
-        return answer
+        
+        let font = UIFont.systemFont(ofSize: 100)
+        let attributes = [NSAttributedString.Key.font: font]
+        let attributedAnswer = NSAttributedString(string: answer, attributes: attributes)
+        
+        return attributedAnswer
     }
     
-    func getRandomAnswers() -> String {
+    func getRandomAnswers() -> NSAttributedString {
         var randNumb = Int.random(in: 0...flagsData.count-1)
         var answer = flagsData[randNumb].unicodeFlag
         
@@ -63,7 +68,12 @@ class FlagsViewModel : NSObject {
             randNumb = Int.random(in: 0...flagsData.count-1)
             answer = flagsData[randNumb].unicodeFlag
         }
-        return answer
+        
+        let font = UIFont.systemFont(ofSize: 100)
+        let attributes = [NSAttributedString.Key.font: font]
+        let attributedAnswer = NSAttributedString(string: answer, attributes: attributes)
+        
+        return attributedAnswer
     }
     
     func getScore() -> String {

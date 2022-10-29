@@ -35,7 +35,7 @@ class FlagsViewController: UIViewController {
     }
  
     @IBAction func answerButtonPressed(_ sender: UIButton) {
-        let userAnswer = sender.currentTitle
+        let userAnswer = sender.currentAttributedTitle?.string
         print(userAnswer!, "USER ANSWER")
         let userGotItRight = flagsViewModel.checkAnswer(userAnswer!)
         
@@ -65,11 +65,17 @@ class FlagsViewController: UIViewController {
             self.questionLabel.text = self.flagsViewModel.getQuestion()
             ///Buttons
             
-            self.A.setTitle(self.flagsViewModel.getRandomAnswers(), for: .normal)
-            self.B.setTitle(self.flagsViewModel.getRandomAnswers(), for: .normal)
-            self.C.setTitle(self.flagsViewModel.getRandomAnswers(), for: .normal)
-            self.D.setTitle(self.flagsViewModel.getRandomAnswers(), for: .normal)
-
+//            let quote = self.flagsViewModel.getRandomAnswers()
+//            let font = UIFont.systemFont(ofSize: 100)
+//            let attributes = [NSAttributedString.Key.font: font]
+//            let attributedQuote = NSAttributedString(string: quote, attributes: attributes)
+            
+            //self.A.set
+            self.A.setAttributedTitle(self.flagsViewModel.getRandomAnswers(), for: .normal)
+            self.B.setAttributedTitle(self.flagsViewModel.getRandomAnswers(), for: .normal)
+            self.C.setAttributedTitle(self.flagsViewModel.getRandomAnswers(), for: .normal)
+            self.D.setAttributedTitle(self.flagsViewModel.getRandomAnswers(), for: .normal)
+        
             self.A.backgroundColor = UIColor.clear
             self.B.backgroundColor = UIColor.clear
             self.C.backgroundColor = UIColor.clear
@@ -77,13 +83,13 @@ class FlagsViewController: UIViewController {
             
             let rightButton = Int.random(in: 0...3)
             switch rightButton {
-            case 0: self.A.setTitle(self.flagsViewModel.getRightAnswer(), for: .normal)
+            case 0: self.A.setAttributedTitle(self.flagsViewModel.getRightAnswer(), for: .normal)
                 
-            case 1: self.B.setTitle(self.flagsViewModel.getRightAnswer(), for: .normal)
+            case 1: self.B.setAttributedTitle(self.flagsViewModel.getRightAnswer(), for: .normal)
                 
-            case 2: self.C.setTitle(self.flagsViewModel.getRightAnswer(), for: .normal)
+            case 2: self.C.setAttributedTitle(self.flagsViewModel.getRightAnswer(), for: .normal)
                 
-            case 3: self.D.setTitle(self.flagsViewModel.getRightAnswer(), for: .normal)
+            case 3: self.D.setAttributedTitle(self.flagsViewModel.getRightAnswer(), for: .normal)
             default:
                 return print("error in switch")
             }
