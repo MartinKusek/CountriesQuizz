@@ -62,6 +62,7 @@ class FlagsViewController: UIViewController {
 
             if let secondViewController = segue.destination as? ResultViewController {
                 secondViewController.score = flagsViewModel.score
+                secondViewController.isFrom = "flagsVC"
                 secondViewController.modalPresentationStyle = .fullScreen
             }
         }

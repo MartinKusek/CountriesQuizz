@@ -12,6 +12,7 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var scoreLabel: UILabel!
     
     var score = 0
+    var isFrom: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,12 +23,17 @@ class ResultViewController: UIViewController {
     func updateScore() {
         scoreLabel.text = "\(score) / 10"
     }
+    
     @IBAction func tryAgainPressed(_ sender: Any) {
-        performSegue(withIdentifier: "resultToCapital", sender: self)
+        if isFrom == "flagsVC" {
+            performSegue(withIdentifier: "resultToFlags", sender: self)
+        } else {
+            performSegue(withIdentifier: "resultToCapital", sender: self)
+        }
     }
     
     @IBAction func welcomeScreenPressed(_ sender: Any) {
-        performSegue(withIdentifier: "resultToWelcome", sender: self)
+        performSegue(withIdentifier: "unwindToStart", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

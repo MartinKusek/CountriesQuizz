@@ -30,6 +30,9 @@ class StartViewController: UIViewController {
             segue.destination.modalPresentationStyle = .fullScreen
         }
     
+    @IBAction func unwind( _ seg: UIStoryboardSegue) {
+    }
+    
     func assignbackground(){
             let background = UIImage(named: "765")
 
@@ -43,4 +46,16 @@ class StartViewController: UIViewController {
             self.view.sendSubviewToBack(imageView)
         }
 
+}
+extension UIView{
+var parentViewController: UIViewController?{
+    var parentResponder: UIResponder? = self
+    while parentResponder != nil {
+        parentResponder = parentResponder!.next
+        if parentResponder is UIViewController{
+            return parentResponder as? UIViewController
+        }
+    }
+    return nil
+   }
 }

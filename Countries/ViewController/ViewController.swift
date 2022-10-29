@@ -61,6 +61,7 @@ class ViewController: UIViewController {
 
             if let secondViewController = segue.destination as? ResultViewController {
                 secondViewController.score = countriesViewModel.score
+                secondViewController.isFrom = "capitalsVC"
                 secondViewController.modalPresentationStyle = .fullScreen
             }
         }
