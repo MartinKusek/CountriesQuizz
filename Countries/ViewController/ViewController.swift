@@ -25,6 +25,13 @@ class ViewController: UIViewController {
         
     }
     
+    func callToViewModelForUIUpdate() {
+        self.countriesViewModel = CountriesViewModel()
+        self.countriesViewModel.bindCountriesViewModelToController = {
+            self.updateUI()
+        }
+    }
+    
      //MARK: - Answer Button Pressed
     
     @IBAction func answerButtonPressed(_ sender: UIButton) {
@@ -46,12 +53,7 @@ class ViewController: UIViewController {
         }
     }
     
-    func callToViewModelForUIUpdate() {
-        self.countriesViewModel = CountriesViewModel()
-        self.countriesViewModel.bindCountriesViewModelToController = {
-            self.updateUI()
-        }
-    }
+     //MARK: - Prepare for Segue
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 

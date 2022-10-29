@@ -34,6 +34,8 @@ class FlagsViewController: UIViewController {
         }
     }
  
+     //MARK: - Answer Button Pressed
+    
     @IBAction func answerButtonPressed(_ sender: UIButton) {
         let userAnswer = sender.currentAttributedTitle?.string
         print(userAnswer!, "USER ANSWER")
@@ -46,13 +48,23 @@ class FlagsViewController: UIViewController {
         }
         
         if !flagsViewModel.nextQuestion() {
-            performSegue(withIdentifier: "capitalToResult", sender: self)
+            performSegue(withIdentifier: "flagsToResult", sender: self)
         }
         
         Timer.scheduledTimer(withTimeInterval: 0.2, repeats: false) { (_) in
             self.updateUI()
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+            super.prepare(for: segue, sender: sender)
+
+            if let secondViewController = segue.destination as? ResultViewController {
+                secondViewController.score = flagsViewModel.score
+                secondViewController.modalPresentationStyle = .fullScreen
+            }
+        }
         
 
     //MARK: - UI Changes
@@ -63,14 +75,8 @@ class FlagsViewController: UIViewController {
             
             ///Question label
             self.questionLabel.text = self.flagsViewModel.getQuestion()
+            
             ///Buttons
-            
-//            let quote = self.flagsViewModel.getRandomAnswers()
-//            let font = UIFont.systemFont(ofSize: 100)
-//            let attributes = [NSAttributedString.Key.font: font]
-//            let attributedQuote = NSAttributedString(string: quote, attributes: attributes)
-            
-            //self.A.set
             self.A.setAttributedTitle(self.flagsViewModel.getRandomAnswers(), for: .normal)
             self.B.setAttributedTitle(self.flagsViewModel.getRandomAnswers(), for: .normal)
             self.C.setAttributedTitle(self.flagsViewModel.getRandomAnswers(), for: .normal)

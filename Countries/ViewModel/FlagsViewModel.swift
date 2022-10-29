@@ -53,7 +53,7 @@ class FlagsViewModel : NSObject {
         let answer = flagsData[rightRandomNumber].unicodeFlag
         print(answer, "TOCAN")
         
-        let font = UIFont.systemFont(ofSize: 100)
+        let font = UIFont.systemFont(ofSize: 120)
         let attributes = [NSAttributedString.Key.font: font]
         let attributedAnswer = NSAttributedString(string: answer, attributes: attributes)
         
@@ -69,7 +69,7 @@ class FlagsViewModel : NSObject {
             answer = flagsData[randNumb].unicodeFlag
         }
         
-        let font = UIFont.systemFont(ofSize: 100)
+        let font = UIFont.systemFont(ofSize: 120)
         let attributes = [NSAttributedString.Key.font: font]
         let attributedAnswer = NSAttributedString(string: answer, attributes: attributes)
         
@@ -103,49 +103,4 @@ class FlagsViewModel : NSObject {
         return Float(questionCount + 1) / 10.00
     }
     
-    func download(url:String) {
-
-        let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0];
-
-        let filePath="\(documentsPath).svg"
-
-        DispatchQueue.global(qos: .background).async {
-
-            if let url = URL(string: "\(url).svg"),
-
-                let urlData = NSData(contentsOf: url) {
-
-                DispatchQueue.main.async {
-
-                    urlData.write(toFile: filePath, atomically: true)
-
-                    print("done")
-
-                }
-            }
-        }
-    }
-    
-}
-
-extension UIImageView {
-    func downloaded(from url: URL, contentMode mode: ContentMode = .scaleAspectFit) {
-        contentMode = mode
-        URLSession.shared.dataTask(with: url) { data, response, error in
-            guard
-                let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
-                let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
-                let data = data, error == nil,
-                let image = UIImage(data: data)
-                else { return }
-            DispatchQueue.main.async() { [weak self] in
-                print(image, "IMAGE")
-                self?.image = image
-            }
-        }.resume()
-    }
-    func downloaded(from link: String, contentMode mode: ContentMode = .scaleAspectFit) {
-        guard let url = URL(string: link) else { return }
-        downloaded(from: url, contentMode: mode)
-    }
 }

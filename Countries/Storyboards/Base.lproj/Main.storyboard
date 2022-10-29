@@ -219,6 +219,7 @@
                         <outlet property="progressBar" destination="2IO-0M-gEp" id="0F9-AQ-U48"/>
                         <outlet property="questionLabel" destination="wVQ-ey-176" id="oug-6x-FVv"/>
                         <outlet property="scoreLabel" destination="o07-l5-yRP" id="lsP-Hi-YBb"/>
+                        <segue destination="2vT-YK-ezD" kind="show" identifier="flagsToResult" id="D5F-Hg-QKb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hvE-5t-JS6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -425,6 +426,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="D5F-Hg-QKb"/>
         <segue reference="i1a-NV-iYe"/>
     </inferredMetricsTieBreakers>
     <resources>
