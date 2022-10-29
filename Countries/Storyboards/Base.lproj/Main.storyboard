@@ -119,12 +119,23 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is the national flag of Croatia?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="wVQ-ey-176">
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="-30" translatesAutoresizingMaskIntoConstraints="NO" id="8Dn-tY-xlN">
                                                 <rect key="frame" x="0.0" y="115.5" width="374" height="270.5"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is the national flag of" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IzD-mq-C7T">
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Croatia?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="wVQ-ey-176">
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="270.5"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="B5P-Cp-d8F">
@@ -133,46 +144,81 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="EQI-qK-DWU">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="183"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iah-qh-NaY">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zem-54-0RS">
                                                         <rect key="frame" x="0.0" y="0.0" width="177" height="183"/>
-                                                    </imageView>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mOG-rZ-BJ7">
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="🇧🇼">
+                                                            <fontDescription key="titleFontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="144"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="answerButtonPressed:" destination="BJW-hl-ggH" eventType="touchUpInside" id="0t2-Ee-Q02"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YtR-8i-IuS">
                                                         <rect key="frame" x="197" y="0.0" width="177" height="183"/>
-                                                    </imageView>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="🇿🇦"/>
+                                                        <connections>
+                                                            <action selector="answerButtonPressed:" destination="BJW-hl-ggH" eventType="touchUpInside" id="QBZ-sr-hfp"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Nyv-Kx-OSW">
                                                 <rect key="frame" x="0.0" y="203" width="374" height="183"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="T3L-hJ-4Qh">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VbX-kb-li1">
                                                         <rect key="frame" x="0.0" y="0.0" width="177" height="183"/>
-                                                    </imageView>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ych-eZ-pBH">
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="🇦🇺" titleAlignment="center">
+                                                            <fontDescription key="titleFontDescription" type="system" weight="ultraLight" pointSize="120"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="answerButtonPressed:" destination="BJW-hl-ggH" eventType="touchUpInside" id="h9K-oa-SuK"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cNw-Y4-wvh">
                                                         <rect key="frame" x="197" y="0.0" width="177" height="183"/>
-                                                    </imageView>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="🇸🇿" titleAlignment="leading">
+                                                            <fontDescription key="titleFontDescription" type="system" weight="ultraLight" pointSize="120"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="answerButtonPressed:" destination="BJW-hl-ggH" eventType="touchUpInside" id="kvi-Qr-nCd"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="2IO-0M-gEp">
+                                <rect key="frame" x="0.0" y="816" width="414" height="4"/>
+                            </progressView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="624-hU-MFz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="utk-C5-xH7" secondAttribute="bottom" constant="50" id="Hn4-un-zv5"/>
+                            <constraint firstItem="2IO-0M-gEp" firstAttribute="centerX" secondItem="sYm-UH-8BE" secondAttribute="centerX" id="M2c-hr-u1V"/>
                             <constraint firstItem="utk-C5-xH7" firstAttribute="leading" secondItem="sYm-UH-8BE" secondAttribute="leading" constant="20" id="Md5-NF-gfd"/>
                             <constraint firstItem="utk-C5-xH7" firstAttribute="top" secondItem="sYm-UH-8BE" secondAttribute="top" constant="20" id="P0c-S6-ESX"/>
+                            <constraint firstAttribute="bottom" secondItem="2IO-0M-gEp" secondAttribute="bottom" constant="22" id="POD-SU-oLe"/>
+                            <constraint firstAttribute="trailing" secondItem="2IO-0M-gEp" secondAttribute="trailing" id="cMs-i7-p1c"/>
                             <constraint firstAttribute="trailing" secondItem="utk-C5-xH7" secondAttribute="trailing" constant="20" id="kbN-Va-fOG"/>
+                            <constraint firstItem="2IO-0M-gEp" firstAttribute="leading" secondItem="sYm-UH-8BE" secondAttribute="leading" id="qYu-oo-fxz"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="mzU-at-Rfc"/>
                     <connections>
-                        <outlet property="A" destination="iah-qh-NaY" id="8wO-R9-6yP"/>
-                        <outlet property="B" destination="mOG-rZ-BJ7" id="HY3-it-79J"/>
-                        <outlet property="C" destination="T3L-hJ-4Qh" id="hgZ-cq-sQD"/>
-                        <outlet property="D" destination="ych-eZ-pBH" id="9Ub-T1-o0M"/>
+                        <outlet property="A" destination="Zem-54-0RS" id="s3r-5Z-JVS"/>
+                        <outlet property="B" destination="YtR-8i-IuS" id="Ayi-B2-THE"/>
+                        <outlet property="C" destination="VbX-kb-li1" id="27q-Zc-vfg"/>
+                        <outlet property="D" destination="cNw-Y4-wvh" id="0Py-rT-hCD"/>
+                        <outlet property="progressBar" destination="2IO-0M-gEp" id="0F9-AQ-U48"/>
                         <outlet property="questionLabel" destination="wVQ-ey-176" id="oug-6x-FVv"/>
+                        <outlet property="scoreLabel" destination="o07-l5-yRP" id="lsP-Hi-YBb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hvE-5t-JS6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

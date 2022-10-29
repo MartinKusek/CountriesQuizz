@@ -40,28 +40,28 @@ class FlagsViewModel : NSObject {
         rightRandomNumber = Int.random(in: 0...flagsData.count-1)
         var countryName = flagsData[rightRandomNumber].name
         
-        if flagsData[rightRandomNumber].name.isEmpty || flagsData[rightRandomNumber].flag.isEmpty {
+        if flagsData[rightRandomNumber].name.isEmpty || flagsData[rightRandomNumber].unicodeFlag.isEmpty {
             rightRandomNumber = Int.random(in: 0...flagsData.count-1)
             countryName = flagsData[rightRandomNumber].name
         }
         
-        let questionString = "What is the capital city of \(countryName)?"
+        let questionString = "\(countryName)?"
         return questionString
     }
     
     func getRightAnswer() -> String {
-        let answer = flagsData[rightRandomNumber].flag
+        let answer = flagsData[rightRandomNumber].unicodeFlag
         print(answer, "TOCAN")
         return answer
     }
     
     func getRandomAnswers() -> String {
         var randNumb = Int.random(in: 0...flagsData.count-1)
-        var answer = flagsData[randNumb].flag
+        var answer = flagsData[randNumb].unicodeFlag
         
         if answer.isEmpty {
             randNumb = Int.random(in: 0...flagsData.count-1)
-            answer = flagsData[randNumb].flag
+            answer = flagsData[randNumb].unicodeFlag
         }
         return answer
     }
@@ -72,7 +72,7 @@ class FlagsViewModel : NSObject {
     }
     
     func checkAnswer(_ userAnswer: String) -> Bool {
-        if userAnswer == flagsData[rightRandomNumber].flag {
+        if userAnswer == flagsData[rightRandomNumber].unicodeFlag {
             score += 1
             return true
         } else {
@@ -91,6 +91,29 @@ class FlagsViewModel : NSObject {
     
     func getProgress() -> Float {
         return Float(questionCount + 1) / 10.00
+    }
+    
+    func download(url:String) {
+
+        let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0];
+
+        let filePath="\(documentsPath).svg"
+
+        DispatchQueue.global(qos: .background).async {
+
+            if let url = URL(string: "\(url).svg"),
+
+                let urlData = NSData(contentsOf: url) {
+
+                DispatchQueue.main.async {
+
+                    urlData.write(toFile: filePath, atomically: true)
+
+                    print("done")
+
+                }
+            }
+        }
     }
     
 }

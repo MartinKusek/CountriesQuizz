@@ -64,7 +64,7 @@ struct APIService {
     
     func fetchFlags(completion : @escaping ([FlagModel]) -> ()) {
             
-        let urlString = "https://countriesnow.space/api/v0.1/countries/flag/images"
+        let urlString = "https://countriesnow.space/api/v0.1/countries/info?returns=currency,flag,unicodeFlag,dialCode"
         
         //1. URL
         if let url = URL(string: urlString) {
@@ -82,7 +82,7 @@ struct APIService {
                 
                 if let safeData = data {
                     if let flagsData = self.parseJSONFlags(safeData) {
-                        print(flagsData)
+                        //print(flagsData)
                         completion(flagsData)
                     }
                 }
@@ -100,7 +100,7 @@ struct APIService {
             
             var flags = [FlagModel]()
             for flag in decodedData.data {
-                let flag1 = FlagModel(name: flag.name, flag: flag.flag)
+                let flag1 = FlagModel(name: flag.name, unicodeFlag: flag.unicodeFlag)
                 flags.append(flag1)
             }
             
