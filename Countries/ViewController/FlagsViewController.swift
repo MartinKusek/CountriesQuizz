@@ -10,7 +10,7 @@ import UIKit
 class FlagsViewController: UIViewController {
     
     @IBOutlet weak var questionLabel: UILabel!
-
+    
     @IBOutlet weak var scoreLabel: UILabel!
     
     @IBOutlet weak var A: UIButton!
@@ -21,7 +21,9 @@ class FlagsViewController: UIViewController {
     @IBOutlet weak var progressBar: UIProgressView!
     
     private var flagsViewModel: FlagsViewModel!
-
+    
+    var rightAnswer = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         callToViewModelForUIUpdate()
@@ -33,41 +35,51 @@ class FlagsViewController: UIViewController {
             self.updateUI()
         }
     }
- 
-     //MARK: - Answer Button Pressed
+    
+    //MARK: - Answer Button Pressed
     
     @IBAction func answerButtonPressed(_ sender: UIButton) {
         let userAnswer = sender.currentAttributedTitle?.string
         print(userAnswer!, "USER ANSWER")
         let userGotItRight = flagsViewModel.checkAnswer(userAnswer!)
         
+        print(rightAnswer)
+        
         if userGotItRight {
             sender.backgroundColor = UIColor.green
         } else {
             sender.backgroundColor = UIColor.red
+            
+            switch rightAnswer {
+                case "A": A.backgroundColor = UIColor.green
+                case "B": B.backgroundColor = UIColor.green
+                case "C": C.backgroundColor = UIColor.green
+            default:
+                D.backgroundColor = UIColor.green
+            }
         }
         
         if !flagsViewModel.nextQuestion() {
             performSegue(withIdentifier: "flagsToResult", sender: self)
         }
         
-        Timer.scheduledTimer(withTimeInterval: 0.2, repeats: false) { (_) in
+        Timer.scheduledTimer(withTimeInterval: 0.3, repeats: false) { (_) in
             self.updateUI()
         }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
-            super.prepare(for: segue, sender: sender)
-
-            if let secondViewController = segue.destination as? ResultViewController {
-                secondViewController.score = flagsViewModel.score
-                secondViewController.isFrom = "flagsVC"
-                secondViewController.modalPresentationStyle = .fullScreen
-            }
-        }
         
-
+        super.prepare(for: segue, sender: sender)
+        
+        if let secondViewController = segue.destination as? ResultViewController {
+            secondViewController.score = flagsViewModel.score
+            secondViewController.isFrom = "flagsVC"
+            secondViewController.modalPresentationStyle = .fullScreen
+        }
+    }
+    
+    
     //MARK: - UI Changes
     
     func updateUI() {
@@ -82,7 +94,7 @@ class FlagsViewController: UIViewController {
             self.B.setAttributedTitle(self.flagsViewModel.getRandomAnswers(), for: .normal)
             self.C.setAttributedTitle(self.flagsViewModel.getRandomAnswers(), for: .normal)
             self.D.setAttributedTitle(self.flagsViewModel.getRandomAnswers(), for: .normal)
-        
+            
             self.A.backgroundColor = UIColor.clear
             self.B.backgroundColor = UIColor.clear
             self.C.backgroundColor = UIColor.clear
@@ -91,12 +103,17 @@ class FlagsViewController: UIViewController {
             let rightButton = Int.random(in: 0...3)
             switch rightButton {
             case 0: self.A.setAttributedTitle(self.flagsViewModel.getRightAnswer(), for: .normal)
+                self.rightAnswer = "A"
                 
             case 1: self.B.setAttributedTitle(self.flagsViewModel.getRightAnswer(), for: .normal)
+                self.rightAnswer = "B"
                 
             case 2: self.C.setAttributedTitle(self.flagsViewModel.getRightAnswer(), for: .normal)
+                self.rightAnswer = "C"
                 
             case 3: self.D.setAttributedTitle(self.flagsViewModel.getRightAnswer(), for: .normal)
+                self.rightAnswer = "D"
+                
             default:
                 return print("error in switch")
             }

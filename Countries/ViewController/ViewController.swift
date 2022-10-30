@@ -18,6 +18,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var progressBar: UIProgressView!
     
     private var countriesViewModel: CountriesViewModel!
+    
+    var rightAnswer = ""
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,13 +44,21 @@ class ViewController: UIViewController {
             sender.backgroundColor = UIColor.green
         } else {
             sender.backgroundColor = UIColor.red
+            
+            switch rightAnswer {
+                case "A": A.backgroundColor = UIColor.green
+                case "B": B.backgroundColor = UIColor.green
+                case "C": C.backgroundColor = UIColor.green
+            default:
+                D.backgroundColor = UIColor.green
+            }
         }
         
         if !countriesViewModel.nextQuestion() {
             performSegue(withIdentifier: "capitalToResult", sender: self)
         }
         
-        Timer.scheduledTimer(withTimeInterval: 0.2, repeats: false) { (_) in
+        Timer.scheduledTimer(withTimeInterval: 0.3, repeats: false) { (_) in
             self.updateUI()
         }
     }
@@ -86,12 +96,17 @@ class ViewController: UIViewController {
             let rightButton = Int.random(in: 0...3)
             switch rightButton {
             case 0: self.A.setTitle(self.countriesViewModel.getRightAnswer(), for: .normal)
+                    self.rightAnswer = "A"
                 
             case 1: self.B.setTitle(self.countriesViewModel.getRightAnswer(), for: .normal)
+                    self.rightAnswer = "B"
                 
             case 2: self.C.setTitle(self.countriesViewModel.getRightAnswer(), for: .normal)
+                    self.rightAnswer = "C"
                 
             case 3: self.D.setTitle(self.countriesViewModel.getRightAnswer(), for: .normal)
+                    self.rightAnswer = "D"
+                
             default:
                 return print("error in switch")
             }
