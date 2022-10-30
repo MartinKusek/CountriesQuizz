@@ -415,6 +415,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="zfC-96-iyH"/>
                     <connections>
+                        <outlet property="messageLabel" destination="NGY-Dz-nbW" id="0di-qD-oPl"/>
                         <outlet property="scoreLabel" destination="YCM-Tr-UFc" id="11y-bc-PZS"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="resultToCapital" id="bbA-Jj-lrt"/>
                         <segue destination="Kl9-Ta-h2T" kind="unwind" identifier="unwindToStart" unwindAction="unwind:" id="RJU-Gp-feF"/>
