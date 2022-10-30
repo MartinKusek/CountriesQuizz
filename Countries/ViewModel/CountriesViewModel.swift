@@ -45,7 +45,7 @@ class CountriesViewModel : NSObject {
             countryName = countriesData[rightRandomNumber].name
         }
         
-        let questionString = "What is the capital city of \(countryName)?"
+        let questionString = "\(countryName)?"
         return questionString
     }
     
