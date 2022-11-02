@@ -11,6 +11,8 @@ class ResultViewController: UIViewController {
 
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var messageLabel: UILabel!
+    @IBOutlet weak var tryAgainButton: UIButton!
+    @IBOutlet weak var welcomeScreenButton: UIButton!
     
     var score = 0
     var isFrom: String = ""
@@ -34,6 +36,18 @@ class ResultViewController: UIViewController {
         default:
             messageLabel.text = "You can do better!"
         }
+        
+        tryAgainButton.tintColor = UIColor(rgb: 0xE3FDFD)
+        tryAgainButton.backgroundColor = .clear
+        tryAgainButton.layer.cornerRadius = 25
+        tryAgainButton.layer.borderWidth = 6
+        tryAgainButton.layer.borderColor = UIColor(rgb: 0xA6E3E9).cgColor
+        
+        welcomeScreenButton.tintColor = UIColor(rgb: 0xE3FDFD)
+        welcomeScreenButton.backgroundColor = .clear
+        welcomeScreenButton.layer.cornerRadius = 25
+        welcomeScreenButton.layer.borderWidth = 6
+        welcomeScreenButton.layer.borderColor = UIColor(rgb: 0xA6E3E9).cgColor
     }
     
     @IBAction func tryAgainPressed(_ sender: Any) {

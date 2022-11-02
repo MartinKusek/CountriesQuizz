@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -25,7 +24,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Countries!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="jmu-AC-hhi">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="229.5"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" red="0.9081899524" green="0.9875921607" blue="0.98923903700000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="globe1" translatesAutoresizingMaskIntoConstraints="NO" id="zdE-Iz-aKg">
@@ -39,25 +38,24 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="HT2-3w-uA6">
                                                 <rect key="frame" x="20" y="0.0" width="374" height="409"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick a game:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qlz-tA-z4x">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick a game:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qlz-tA-z4x">
                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="123"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
-                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
+                                                        <color key="textColor" red="0.9081899524" green="0.9875921607" blue="0.98923903700000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gl9-5E-6eU">
                                                         <rect key="frame" x="0.0" y="143" width="374" height="123"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="Flags">
-                                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="30"/>
-                                                        </buttonConfiguration>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="Flags"/>
                                                         <connections>
                                                             <action selector="flagsButtonPressed:" destination="TsZ-dx-0YX" eventType="touchUpInside" id="W2o-GN-eEC"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9uS-mh-UYM">
                                                         <rect key="frame" x="0.0" y="286" width="374" height="123"/>
-                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="Capital Cities"/>
                                                         <connections>
@@ -67,7 +65,7 @@
                                                 </subviews>
                                             </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" red="0.53036040070000001" green="0.78102725740000001" blue="0.80087822679999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="HT2-3w-uA6" secondAttribute="bottom" id="2EG-fM-Qbw"/>
                                             <constraint firstItem="HT2-3w-uA6" firstAttribute="leading" secondItem="IGG-8f-fu6" secondAttribute="leading" constant="20" id="WfR-vl-4pI"/>
@@ -79,7 +77,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LJs-YA-N7f"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.53036040070000001" green="0.78102725740000001" blue="0.80087822679999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="szJ-Bl-oxi" firstAttribute="top" secondItem="LJs-YA-N7f" secondAttribute="top" id="0li-Vk-pOR"/>
                             <constraint firstItem="LJs-YA-N7f" firstAttribute="bottom" secondItem="szJ-Bl-oxi" secondAttribute="bottom" id="G7n-kS-jmo"/>
@@ -89,6 +87,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="ndy-1I-ouT"/>
                     <connections>
+                        <outlet property="capitalCitiesButton" destination="9uS-mh-UYM" id="xfd-dR-OEr"/>
+                        <outlet property="flagsButton" destination="Gl9-5E-6eU" id="VY1-v5-HF1"/>
                         <outlet property="startView" destination="ZOJ-xv-LWL" id="DKC-pb-jvx"/>
                         <segue destination="BYZ-38-t0r" kind="showDetail" identifier="startToCapital" id="i1a-NV-iYe"/>
                         <segue destination="BJW-hl-ggH" kind="show" identifier="startToFlags" id="b8a-GY-W5d"/>
@@ -197,7 +197,7 @@
                             </progressView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="624-hU-MFz"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.53036040070000001" green="0.78102725740000001" blue="0.80087822679999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="utk-C5-xH7" secondAttribute="bottom" constant="50" id="Hn4-un-zv5"/>
                             <constraint firstItem="2IO-0M-gEp" firstAttribute="centerX" secondItem="sYm-UH-8BE" secondAttribute="centerX" id="M2c-hr-u1V"/>
@@ -245,7 +245,7 @@
                                                     <constraint firstAttribute="height" constant="100" id="SXt-wQ-7gm"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" red="0.9081899524" green="0.9875921607" blue="0.98923903700000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="-30" translatesAutoresizingMaskIntoConstraints="NO" id="agV-pm-gjO">
@@ -254,13 +254,13 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is the capital city of " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y80-KF-r8c">
                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" red="0.9081899524" green="0.9875921607" blue="0.98923903700000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Croatia?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="mvN-zj-i2a">
                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="284"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" red="0.9081899524" green="0.9875921607" blue="0.98923903700000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
@@ -334,7 +334,7 @@
                             </progressView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.53036040070000001" green="0.78102725740000001" blue="0.80087822679999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Ze5-Aq-OgM" secondAttribute="trailing" id="1xD-AA-PWJ"/>
                             <constraint firstItem="ZgB-Jf-wSB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="CdW-K9-ztt"/>
@@ -375,54 +375,53 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOUR RESULT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QfE-Z9-uES">
                                         <rect key="frame" x="0.0" y="0.0" width="232" height="42"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" red="0.9081899524" green="0.9875921607" blue="0.98923903700000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8 / 10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YCM-Tr-UFc">
                                         <rect key="frame" x="0.0" y="42" width="232" height="95.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="80"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" red="0.9081899524" green="0.9875921607" blue="0.98923903700000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good job!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NGY-Dz-nbW">
                                         <rect key="frame" x="0.0" y="137.5" width="232" height="30"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="25"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" red="0.9081899524" green="0.9875921607" blue="0.98923903700000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="a25-yH-LOO">
-                                <rect key="frame" x="20" y="690" width="374" height="118"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="a25-yH-LOO">
+                                <rect key="frame" x="20" y="558" width="374" height="250"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbV-f7-yQ2">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="38"/>
-                                        <state key="normal" title="Button"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbV-f7-yQ2">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="115"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Try Again">
-                                            <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
+                                            <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="30"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="tryAgainPressed:" destination="2vT-YK-ezD" eventType="touchUpInside" id="DOC-vL-bhE"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pFz-yg-tsg">
-                                        <rect key="frame" x="0.0" y="68" width="374" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="bfU-CB-cxW"/>
-                                        </constraints>
+                                        <rect key="frame" x="0.0" y="135" width="374" height="115"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Welcome Screen">
-                                            <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
+                                            <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="30"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="welcomeScreenPressed:" destination="2vT-YK-ezD" eventType="touchUpInside" id="UnI-0C-PFi"/>
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="cpL-sF-8Eu"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="P4d-51-PA3"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.53036040070000001" green="0.78102725740000001" blue="0.80087822679999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="a25-yH-LOO" firstAttribute="centerX" secondItem="THD-n9-jcL" secondAttribute="centerX" id="2j3-Ss-azf"/>
                             <constraint firstItem="SdX-zH-mTZ" firstAttribute="centerY" secondItem="THD-n9-jcL" secondAttribute="centerY" id="3t5-YK-E5i"/>
@@ -436,6 +435,8 @@
                     <connections>
                         <outlet property="messageLabel" destination="NGY-Dz-nbW" id="0di-qD-oPl"/>
                         <outlet property="scoreLabel" destination="YCM-Tr-UFc" id="11y-bc-PZS"/>
+                        <outlet property="tryAgainButton" destination="dbV-f7-yQ2" id="9iu-LW-aP0"/>
+                        <outlet property="welcomeScreenButton" destination="pFz-yg-tsg" id="TdF-MF-1tO"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="resultToCapital" id="bbA-Jj-lrt"/>
                         <segue destination="Kl9-Ta-h2T" kind="unwind" identifier="unwindToStart" unwindAction="unwind:" id="RJU-Gp-feF"/>
                         <segue destination="BJW-hl-ggH" kind="show" identifier="resultToFlags" id="oPn-Mx-4ib"/>
@@ -444,7 +445,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jfN-b7-Q70" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="Kl9-Ta-h2T" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2078" y="42"/>
+            <point key="canvasLocation" x="2075.36231884058" y="41.517857142857139"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
@@ -454,8 +455,5 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="globe1" width="800" height="800"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

@@ -118,6 +118,26 @@ class FlagsViewController: UIViewController {
                 return print("error in switch")
             }
             
+            self.A.backgroundColor = .clear
+            self.A.layer.cornerRadius = 25
+            self.A.layer.borderWidth = 4
+            self.A.layer.borderColor = UIColor(rgb: 0xA6E3E9).cgColor
+            
+            self.B.backgroundColor = .clear
+            self.B.layer.cornerRadius = 25
+            self.B.layer.borderWidth = 4
+            self.B.layer.borderColor = UIColor(rgb: 0xA6E3E9).cgColor
+            
+            self.D.backgroundColor = .clear
+            self.D.layer.cornerRadius = 25
+            self.D.layer.borderWidth = 4
+            self.D.layer.borderColor = UIColor(rgb: 0xA6E3E9).cgColor
+            
+            self.C.backgroundColor = .clear
+            self.C.layer.cornerRadius = 25
+            self.C.layer.borderWidth = 4
+            self.C.layer.borderColor = UIColor(rgb: 0xA6E3E9).cgColor
+            
             ///Score
             self.scoreLabel.text = self.flagsViewModel.getScore()
             
