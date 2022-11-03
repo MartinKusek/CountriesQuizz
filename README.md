@@ -12,12 +12,12 @@ Welcome screen
 
 Flags game
 
-![App Screenshot](https://github.com/MartinKusek/CountriesQuizz/blob/main/Screenshots/flag.gif)
+![App Screenshot](https://github.com/MartinKusek/CountriesQuizz/blob/main/Screenshots/flags.gif)
 
 
 Capital cities game
 
-![App Screenshot](https://github.com/MartinKusek/CountriesQuizz/blob/main/Screenshots/capital.gif)
+![App Screenshot](https://github.com/MartinKusek/CountriesQuizz/blob/main/Screenshots/capitals.gif)
 
 
 Result screen
