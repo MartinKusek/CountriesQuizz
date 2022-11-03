@@ -37,17 +37,19 @@ class ResultViewController: UIViewController {
             messageLabel.text = "You can do better!"
         }
         
-        tryAgainButton.tintColor = UIColor(rgb: 0xE3FDFD)
+        tryAgainButton.tintColor = UIColor(rgb: 0x71C9CE)
         tryAgainButton.backgroundColor = .clear
         tryAgainButton.layer.cornerRadius = 25
         tryAgainButton.layer.borderWidth = 6
-        tryAgainButton.layer.borderColor = UIColor(rgb: 0xA6E3E9).cgColor
+        tryAgainButton.backgroundColor = UIColor(rgb: 0xE3FDFD)
+        tryAgainButton.layer.borderColor = UIColor(rgb: 0xE3FDFD).cgColor
         
-        welcomeScreenButton.tintColor = UIColor(rgb: 0xE3FDFD)
+        welcomeScreenButton.tintColor = UIColor(rgb: 0x71C9CE)
         welcomeScreenButton.backgroundColor = .clear
         welcomeScreenButton.layer.cornerRadius = 25
         welcomeScreenButton.layer.borderWidth = 6
-        welcomeScreenButton.layer.borderColor = UIColor(rgb: 0xA6E3E9).cgColor
+        welcomeScreenButton.backgroundColor = UIColor(rgb: 0xE3FDFD)
+        welcomeScreenButton.layer.borderColor = UIColor(rgb: 0xE3FDFD).cgColor
     }
     
     @IBAction func tryAgainPressed(_ sender: Any) {

@@ -16,73 +16,61 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="szJ-Bl-oxi">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="20" y="44" width="374" height="812"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="-50" translatesAutoresizingMaskIntoConstraints="NO" id="Y7Z-GS-uYd">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="409"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="406"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Countries!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="jmu-AC-hhi">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="229.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="228"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
-                                                <color key="textColor" red="0.9081899524" green="0.9875921607" blue="0.98923903700000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="textColor" red="0.8703420758" green="0.95714455840000001" blue="0.94870060680000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="globe1" translatesAutoresizingMaskIntoConstraints="NO" id="zdE-Iz-aKg">
-                                                <rect key="frame" x="0.0" y="179.5" width="414" height="229.5"/>
+                                                <rect key="frame" x="0.0" y="178" width="374" height="228"/>
                                             </imageView>
                                         </subviews>
                                     </stackView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IGG-8f-fu6" userLabel="buttonsView">
-                                        <rect key="frame" x="0.0" y="409" width="414" height="409"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="HT2-3w-uA6">
+                                        <rect key="frame" x="0.0" y="406" width="374" height="406"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="HT2-3w-uA6">
-                                                <rect key="frame" x="20" y="0.0" width="374" height="409"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick a game:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qlz-tA-z4x">
-                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="123"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
-                                                        <color key="textColor" red="0.9081899524" green="0.9875921607" blue="0.98923903700000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gl9-5E-6eU">
-                                                        <rect key="frame" x="0.0" y="143" width="374" height="123"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
-                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" title="Flags"/>
-                                                        <connections>
-                                                            <action selector="flagsButtonPressed:" destination="TsZ-dx-0YX" eventType="touchUpInside" id="W2o-GN-eEC"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9uS-mh-UYM">
-                                                        <rect key="frame" x="0.0" y="286" width="374" height="123"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
-                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" title="Capital Cities"/>
-                                                        <connections>
-                                                            <action selector="capitalCitysPressed:" destination="TsZ-dx-0YX" eventType="touchUpInside" id="E2j-th-bO4"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick a game:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qlz-tA-z4x">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="122"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
+                                                <color key="textColor" red="0.8703420758" green="0.95714455840000001" blue="0.94870060680000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gl9-5E-6eU">
+                                                <rect key="frame" x="0.0" y="142" width="374" height="122"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Flags"/>
+                                                <connections>
+                                                    <action selector="flagsButtonPressed:" destination="TsZ-dx-0YX" eventType="touchUpInside" id="W2o-GN-eEC"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9uS-mh-UYM">
+                                                <rect key="frame" x="0.0" y="284" width="374" height="122"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Capital Cities"/>
+                                                <connections>
+                                                    <action selector="capitalCitysPressed:" destination="TsZ-dx-0YX" eventType="touchUpInside" id="E2j-th-bO4"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.53036040070000001" green="0.78102725740000001" blue="0.80087822679999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="HT2-3w-uA6" secondAttribute="bottom" id="2EG-fM-Qbw"/>
-                                            <constraint firstItem="HT2-3w-uA6" firstAttribute="leading" secondItem="IGG-8f-fu6" secondAttribute="leading" constant="20" id="WfR-vl-4pI"/>
-                                            <constraint firstAttribute="trailing" secondItem="HT2-3w-uA6" secondAttribute="trailing" constant="20" id="eaD-D7-5PU"/>
-                                            <constraint firstItem="HT2-3w-uA6" firstAttribute="top" secondItem="IGG-8f-fu6" secondAttribute="top" id="rsV-gg-Bi4"/>
-                                        </constraints>
-                                    </view>
+                                    </stackView>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LJs-YA-N7f"/>
                         <color key="backgroundColor" red="0.53036040070000001" green="0.78102725740000001" blue="0.80087822679999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="szJ-Bl-oxi" firstAttribute="top" secondItem="LJs-YA-N7f" secondAttribute="top" id="0li-Vk-pOR"/>
-                            <constraint firstItem="LJs-YA-N7f" firstAttribute="bottom" secondItem="szJ-Bl-oxi" secondAttribute="bottom" id="G7n-kS-jmo"/>
-                            <constraint firstItem="szJ-Bl-oxi" firstAttribute="leading" secondItem="LJs-YA-N7f" secondAttribute="leading" id="YS6-Du-xMW"/>
-                            <constraint firstItem="LJs-YA-N7f" firstAttribute="trailing" secondItem="szJ-Bl-oxi" secondAttribute="trailing" id="p57-um-g9H"/>
+                            <constraint firstAttribute="bottom" secondItem="szJ-Bl-oxi" secondAttribute="bottom" constant="40" id="BXk-53-n3W"/>
+                            <constraint firstItem="szJ-Bl-oxi" firstAttribute="leading" secondItem="LJs-YA-N7f" secondAttribute="leading" constant="20" id="IRP-1r-EBb"/>
+                            <constraint firstAttribute="trailing" secondItem="szJ-Bl-oxi" secondAttribute="trailing" constant="20" id="UKy-8N-bO6"/>
+                            <constraint firstItem="szJ-Bl-oxi" firstAttribute="top" secondItem="LJs-YA-N7f" secondAttribute="top" id="pod-8P-367"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ndy-1I-ouT"/>
@@ -115,7 +103,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your score: 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o07-l5-yRP">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="115.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" red="0.8703420758" green="0.95714455840000001" blue="0.94870060680000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="-30" translatesAutoresizingMaskIntoConstraints="NO" id="8Dn-tY-xlN">
@@ -124,13 +112,13 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is the national flag of" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IzD-mq-C7T">
                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" red="0.8703420758" green="0.95714455840000001" blue="0.94870060680000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Croatia?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="wVQ-ey-176">
                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="270.5"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" red="0.8703420758" green="0.95714455840000001" blue="0.94870060680000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
@@ -281,7 +269,8 @@
                                                             <attributedString key="attributedTitle">
                                                                 <fragment content="ButtonA">
                                                                     <attributes>
-                                                                        <font key="NSFont" size="12" name="Helvetica"/>
+                                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                                        <font key="NSFont" size="15" name="Helvetica"/>
                                                                         <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                     </attributes>
                                                                 </fragment>
@@ -450,8 +439,8 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Wpn-2d-Qfy"/>
-        <segue reference="bbA-Jj-lrt"/>
-        <segue reference="oPn-Mx-4ib"/>
+        <segue reference="i1a-NV-iYe"/>
+        <segue reference="b8a-GY-W5d"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="globe1" width="800" height="800"/>

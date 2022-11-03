@@ -16,17 +16,19 @@ class StartViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        flagsButton.tintColor = UIColor(rgb: 0xE3FDFD)
+        flagsButton.tintColor = UIColor(rgb: 0x71C9CE)
         flagsButton.backgroundColor = .clear
         flagsButton.layer.cornerRadius = 25
         flagsButton.layer.borderWidth = 6
-        flagsButton.layer.borderColor = UIColor(rgb: 0xA6E3E9).cgColor
+        flagsButton.backgroundColor = UIColor(rgb: 0xE3FDFD)
+        flagsButton.layer.borderColor = UIColor(rgb: 0xE3FDFD).cgColor
         
-        capitalCitiesButton.tintColor = UIColor(rgb: 0xE3FDFD)
+        capitalCitiesButton.tintColor = UIColor(rgb: 0x71C9CE)
         capitalCitiesButton.backgroundColor = .clear
         capitalCitiesButton.layer.cornerRadius = 25
         capitalCitiesButton.layer.borderWidth = 6
-        capitalCitiesButton.layer.borderColor = UIColor(rgb: 0xA6E3E9).cgColor
+        capitalCitiesButton.backgroundColor = UIColor(rgb: 0xE3FDFD)
+        capitalCitiesButton.layer.borderColor = UIColor(rgb: 0xE3FDFD).cgColor
 
     }
     
