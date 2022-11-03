@@ -68,6 +68,10 @@ class FlagsViewController: UIViewController {
         }
     }
     
+    @IBAction func backButtonPressed(_ sender: Any) {
+        performSegue(withIdentifier: "flagsToStart", sender: self)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         super.prepare(for: segue, sender: sender)

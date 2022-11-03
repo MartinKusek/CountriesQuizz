@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var C: UIButton!
     @IBOutlet weak var D: UIButton!
     @IBOutlet weak var progressBar: UIProgressView!
+    @IBOutlet weak var backButton: UIButton!
     
     private var countriesViewModel: CountriesViewModel!
     
@@ -63,7 +64,11 @@ class ViewController: UIViewController {
         }
     }
     
-     //MARK: - Prepare for Segue
+    @IBAction func backButtonPressed(_ sender: Any) {
+        performSegue(withIdentifier: "flagsToStart", sender: self)
+    }
+    
+    //MARK: - Prepare for Segue
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
@@ -134,6 +139,8 @@ class ViewController: UIViewController {
             self.C.layer.cornerRadius = 25
             self.C.layer.borderWidth = 4
             self.C.layer.borderColor = UIColor(rgb: 0xA6E3E9).cgColor
+            
+           // self.backButton.tintColor = UIColor(rgb: 0xA6E3E9)
             
             
             ///Score
