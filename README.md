@@ -7,22 +7,22 @@ Test your knowledge of capital cities or try to guess the national flags of the 
 
 Welcome screen
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot](https://github.com/MartinKusek/CountriesQuizz/blob/main/Screenshots/Welcome%20screen.png)
 
 
 Flags game
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot](https://github.com/MartinKusek/CountriesQuizz/blob/main/Screenshots/flag.gif)
 
 
 Capital cities game
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot](https://github.com/MartinKusek/CountriesQuizz/blob/main/Screenshots/capital.gif)
 
 
 Result screen
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot](https://github.com/MartinKusek/CountriesQuizz/blob/main/Screenshots/ResultScreen.png)
 
 
 
