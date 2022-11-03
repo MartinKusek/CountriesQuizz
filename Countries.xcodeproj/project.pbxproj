@@ -15,7 +15,7 @@
 		C30E17C92906BD8E00395AB2 /* CountriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30E17C82906BD8E00395AB2 /* CountriesViewModel.swift */; };
 		C3F75C5B2905C485008543BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F75C5A2905C485008543BD /* AppDelegate.swift */; };
 		C3F75C5D2905C485008543BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F75C5C2905C485008543BD /* SceneDelegate.swift */; };
-		C3F75C5F2905C485008543BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F75C5E2905C485008543BD /* ViewController.swift */; };
+		C3F75C5F2905C485008543BD /* CapitalCitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F75C5E2905C485008543BD /* CapitalCitiesViewController.swift */; };
 		C3F75C622905C485008543BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3F75C602905C485008543BD /* Main.storyboard */; };
 		C3F75C642905C486008543BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3F75C632905C486008543BD /* Assets.xcassets */; };
 		C3F75C672905C486008543BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3F75C652905C486008543BD /* LaunchScreen.storyboard */; };
@@ -33,7 +33,7 @@
 		C3F75C572905C485008543BD /* Countries.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Countries.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3F75C5A2905C485008543BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3F75C5C2905C485008543BD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C3F75C5E2905C485008543BD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C3F75C5E2905C485008543BD /* CapitalCitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapitalCitiesViewController.swift; sourceTree = "<group>"; };
 		C3F75C612905C485008543BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C3F75C632905C486008543BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C3F75C662905C486008543BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -74,7 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				C302D8E7290BEA06005AAD36 /* StartViewController.swift */,
-				C3F75C5E2905C485008543BD /* ViewController.swift */,
+				C3F75C5E2905C485008543BD /* CapitalCitiesViewController.swift */,
 				C302D8ED290C2319005AAD36 /* FlagsViewController.swift */,
 				C302D8E9290BF45B005AAD36 /* ResultViewController.swift */,
 			);
@@ -217,7 +217,7 @@
 				C3F75C6F2905C4A8008543BD /* APIService.swift in Sources */,
 				C302D8EC290C214B005AAD36 /* FlagsModel.swift in Sources */,
 				C302D8EA290BF45B005AAD36 /* ResultViewController.swift in Sources */,
-				C3F75C5F2905C485008543BD /* ViewController.swift in Sources */,
+				C3F75C5F2905C485008543BD /* CapitalCitiesViewController.swift in Sources */,
 				C3F75C5B2905C485008543BD /* AppDelegate.swift in Sources */,
 				C3F75C5D2905C485008543BD /* SceneDelegate.swift in Sources */,
 				C3F75C732905C4BC008543BD /* CountriesModel.swift in Sources */,

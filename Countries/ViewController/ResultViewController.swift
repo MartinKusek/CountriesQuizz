@@ -9,19 +9,22 @@ import UIKit
 
 class ResultViewController: UIViewController {
 
+    ///Outlets
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var tryAgainButton: UIButton!
     @IBOutlet weak var welcomeScreenButton: UIButton!
     
+    ///Variables
     var score = 0
     var isFrom: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         updateUI()
     }
+    
+     //MARK: - UI Changes
     
     func updateUI() {
         scoreLabel.text = "\(score) / 10"
@@ -36,7 +39,7 @@ class ResultViewController: UIViewController {
         default:
             messageLabel.text = "You can do better!"
         }
-        
+        ///Buttons
         tryAgainButton.tintColor = UIColor(rgb: 0x71C9CE)
         tryAgainButton.backgroundColor = .clear
         tryAgainButton.layer.cornerRadius = 25
@@ -51,6 +54,8 @@ class ResultViewController: UIViewController {
         welcomeScreenButton.backgroundColor = UIColor(rgb: 0xE3FDFD)
         welcomeScreenButton.layer.borderColor = UIColor(rgb: 0xE3FDFD).cgColor
     }
+    
+     //MARK: - Button actions
     
     @IBAction func tryAgainPressed(_ sender: Any) {
         if isFrom == "flagsVC" {

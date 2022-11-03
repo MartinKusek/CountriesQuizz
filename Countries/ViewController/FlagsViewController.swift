@@ -9,20 +9,18 @@ import UIKit
 
 class FlagsViewController: UIViewController {
     
+    ///Outlets
     @IBOutlet weak var questionLabel: UILabel!
-    
     @IBOutlet weak var scoreLabel: UILabel!
-    
     @IBOutlet weak var A: UIButton!
     @IBOutlet weak var B: UIButton!
     @IBOutlet weak var C: UIButton!
     @IBOutlet weak var D: UIButton!
-    
     @IBOutlet weak var progressBar: UIProgressView!
     
+    ///Variables
     private var flagsViewModel: FlagsViewModel!
-    
-    var rightAnswer = ""
+    private var rightAnswer = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,10 +65,14 @@ class FlagsViewController: UIViewController {
             self.updateUI()
         }
     }
+     //MARK: - Exit Button Pressed
     
-    @IBAction func backButtonPressed(_ sender: Any) {
+    @IBAction func exitButtonPressed(_ sender: Any) {
         performSegue(withIdentifier: "flagsToStart", sender: self)
     }
+
+    
+     //MARK: - Prepare for Segue
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
@@ -94,10 +96,10 @@ class FlagsViewController: UIViewController {
             self.questionLabel.text = self.flagsViewModel.getQuestion()
             
             ///Buttons
-            self.A.setAttributedTitle(self.flagsViewModel.getRandomAnswers(), for: .normal)
-            self.B.setAttributedTitle(self.flagsViewModel.getRandomAnswers(), for: .normal)
-            self.C.setAttributedTitle(self.flagsViewModel.getRandomAnswers(), for: .normal)
-            self.D.setAttributedTitle(self.flagsViewModel.getRandomAnswers(), for: .normal)
+            self.A.setAttributedTitle(self.flagsViewModel.getRandomAnswer(), for: .normal)
+            self.B.setAttributedTitle(self.flagsViewModel.getRandomAnswer(), for: .normal)
+            self.C.setAttributedTitle(self.flagsViewModel.getRandomAnswer(), for: .normal)
+            self.D.setAttributedTitle(self.flagsViewModel.getRandomAnswer(), for: .normal)
             
             self.A.backgroundColor = UIColor.clear
             self.B.backgroundColor = UIColor.clear
@@ -132,21 +134,23 @@ class FlagsViewController: UIViewController {
             self.B.layer.borderWidth = 4
             self.B.layer.borderColor = UIColor(rgb: 0xA6E3E9).cgColor
             
-            self.D.backgroundColor = .clear
-            self.D.layer.cornerRadius = 25
-            self.D.layer.borderWidth = 4
-            self.D.layer.borderColor = UIColor(rgb: 0xA6E3E9).cgColor
-            
             self.C.backgroundColor = .clear
             self.C.layer.cornerRadius = 25
             self.C.layer.borderWidth = 4
             self.C.layer.borderColor = UIColor(rgb: 0xA6E3E9).cgColor
+            
+            self.D.backgroundColor = .clear
+            self.D.layer.cornerRadius = 25
+            self.D.layer.borderWidth = 4
+            self.D.layer.borderColor = UIColor(rgb: 0xA6E3E9).cgColor
             
             ///Score
             self.scoreLabel.text = self.flagsViewModel.getScore()
             
             ///ProgressBar
             self.progressBar.progress = self.flagsViewModel.getProgress()
+            self.progressBar.progressTintColor = UIColor(rgb: 0x6E85B7)
+            self.progressBar.trackTintColor = UIColor(rgb: 0xE3FDFD)
         }
     }
     

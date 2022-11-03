@@ -77,7 +77,6 @@
                     <connections>
                         <outlet property="capitalCitiesButton" destination="9uS-mh-UYM" id="xfd-dR-OEr"/>
                         <outlet property="flagsButton" destination="Gl9-5E-6eU" id="VY1-v5-HF1"/>
-                        <outlet property="startView" destination="ZOJ-xv-LWL" id="DKC-pb-jvx"/>
                         <segue destination="BYZ-38-t0r" kind="showDetail" identifier="startToCapital" id="i1a-NV-iYe"/>
                         <segue destination="BJW-hl-ggH" kind="show" identifier="startToFlags" id="b8a-GY-W5d"/>
                     </connections>
@@ -120,7 +119,7 @@
                                                             <color key="titleColor" red="0.8703420758" green="0.95714455840000001" blue="0.94870060680000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="backButtonPressed:" destination="BJW-hl-ggH" eventType="touchUpInside" id="W3y-Qf-pB2"/>
+                                                            <action selector="exitButtonPressed:" destination="BJW-hl-ggH" eventType="touchUpInside" id="c8c-H4-Ebz"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -234,10 +233,10 @@
             </objects>
             <point key="canvasLocation" x="490" y="542"/>
         </scene>
-        <!--View Controller-->
+        <!--Capital Cities View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Countries" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CapitalCitiesViewController" customModule="Countries" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -268,7 +267,7 @@
                                                             <color key="titleColor" red="0.8703420758" green="0.95714455840000001" blue="0.94870060680000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="backButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zti-Sz-uYo"/>
+                                                            <action selector="exitButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IVB-s4-jJK"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -384,7 +383,7 @@
                         <outlet property="questionLabel" destination="mvN-zj-i2a" id="eOj-B2-EeF"/>
                         <outlet property="scoreLabel" destination="h6O-vd-JIh" id="QWy-xI-8CZ"/>
                         <segue destination="2vT-YK-ezD" kind="show" identifier="capitalToResult" id="Wpn-2d-Qfy"/>
-                        <segue destination="Y0J-xy-AXX" kind="unwind" identifier="flagsToStart" unwindAction="unwind:" id="XIU-bb-fvZ"/>
+                        <segue destination="Y0J-xy-AXX" kind="unwind" identifier="citiesToStart" unwindAction="unwind:" id="XIU-bb-fvZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

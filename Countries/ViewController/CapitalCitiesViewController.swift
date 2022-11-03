@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  CapitalCitiesViewController.swift
 //  Countries
 //
 //  Created by Martin Kusek on 23.10.2022..
@@ -7,8 +7,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class CapitalCitiesViewController: UIViewController {
     
+    ///Outlets
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var A: UIButton!
@@ -18,9 +19,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var progressBar: UIProgressView!
     @IBOutlet weak var backButton: UIButton!
     
+    ///Variables
     private var countriesViewModel: CountriesViewModel!
-    
-    var rightAnswer = ""
+    private var rightAnswer = ""
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,8 +65,10 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func backButtonPressed(_ sender: Any) {
-        performSegue(withIdentifier: "flagsToStart", sender: self)
+     //MARK: - Exit Button Pressed
+    
+    @IBAction func exitButtonPressed(_ sender: Any) {
+        performSegue(withIdentifier: "citiesToStart", sender: self)
     }
     
     //MARK: - Prepare for Segue
@@ -87,11 +90,12 @@ class ViewController: UIViewController {
         DispatchQueue.main.async {
             ///Question label
             self.questionLabel.text = self.countriesViewModel.getQuestion()
+            
             ///Buttons
-            self.A.setTitle(self.countriesViewModel.getRandomAnswers(), for: .normal)
-            self.B.setTitle(self.countriesViewModel.getRandomAnswers(), for: .normal)
-            self.C.setTitle(self.countriesViewModel.getRandomAnswers(), for: .normal)
-            self.D.setTitle(self.countriesViewModel.getRandomAnswers(), for: .normal)
+            self.A.setTitle(self.countriesViewModel.getRandomAnswer(), for: .normal)
+            self.B.setTitle(self.countriesViewModel.getRandomAnswer(), for: .normal)
+            self.C.setTitle(self.countriesViewModel.getRandomAnswer(), for: .normal)
+            self.D.setTitle(self.countriesViewModel.getRandomAnswer(), for: .normal)
             
             self.A.backgroundColor = UIColor.clear
             self.B.backgroundColor = UIColor.clear
@@ -128,26 +132,25 @@ class ViewController: UIViewController {
             self.B.layer.borderWidth = 4
             self.B.layer.borderColor = UIColor(rgb: 0xA6E3E9).cgColor
             
-            self.D.tintColor = UIColor(rgb: 0xE3FDFD)
-            self.D.backgroundColor = .clear
-            self.D.layer.cornerRadius = 25
-            self.D.layer.borderWidth = 4
-            self.D.layer.borderColor = UIColor(rgb: 0xA6E3E9).cgColor
-            
             self.C.tintColor = UIColor(rgb: 0xE3FDFD)
             self.C.backgroundColor = .clear
             self.C.layer.cornerRadius = 25
             self.C.layer.borderWidth = 4
             self.C.layer.borderColor = UIColor(rgb: 0xA6E3E9).cgColor
             
-           // self.backButton.tintColor = UIColor(rgb: 0xA6E3E9)
-            
+            self.D.tintColor = UIColor(rgb: 0xE3FDFD)
+            self.D.backgroundColor = .clear
+            self.D.layer.cornerRadius = 25
+            self.D.layer.borderWidth = 4
+            self.D.layer.borderColor = UIColor(rgb: 0xA6E3E9).cgColor
             
             ///Score
             self.scoreLabel.text = self.countriesViewModel.getScore()
             
             ///ProgressBar
             self.progressBar.progress = self.countriesViewModel.getProgress()
+            self.progressBar.progressTintColor = UIColor(rgb: 0x6E85B7)
+            self.progressBar.trackTintColor = UIColor(rgb: 0xE3FDFD)
         }
     }
 
