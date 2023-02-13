@@ -43,15 +43,6 @@ class CountriesViewModel {
     
     func getRandomAnswers (coutries: [CountriesModel]) -> String {
         return coutries[Int.random(in: 0...coutries.count)].capital
-    }
-    
-    //treba mi jos jedna varijabla koja broji koliko pitanja je postavljeno, od 0 do 10 (dok je 10 gotov je quizz)
-    
+    }    
 }
-// jedna funkcija za loudanje
-//random int koji oznacava tocni odgovor - NE SMIJE SE PONAVLJAT -> moguce napraviti array brojeva koji su vec bili i po njima provjeravati
-//salje pitanje -> String
-//salje 4 odgovora, 1 tocan i 3 random ->[String]
-//chekira odgovor (dok je tocan odgovor zeleno dok je pogresean crveno) i povecava score ako je odgovor tocan i broj pitanja -> ide novo pitanje
 
-//dok se odgovori na 10 pitanja salje se na novi screen gdje pise score i poruka
